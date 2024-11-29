@@ -1,3 +1,4 @@
+HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# birdsfly
+BirdsFly Shopping is a user-friendly e-commerce platform offering a seamless shopping experience. Key features include product search, wishlist, cart, dynamic order summaries, and an address section. With responsive design and personalized search, it ensures smooth navigation. Backend integration enhances data management for efficient operations.
+c204b0f7249536e2960095ba540f6e1a1717ff5b
