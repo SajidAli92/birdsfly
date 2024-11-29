@@ -1,0 +1,276 @@
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+    background-color: #9ec7f0;
+    color: #fff;
+    position: relative;
+  }
+
+  .navbar-logo img {
+    height: 60px;
+   
+  }
+  
+  .navbar-search {
+    flex-grow: 1;
+    display: flex;
+    /* justify-content: center; */
+    padding: 0 1rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 700px;
+    padding: 0.5rem;
+    border: none;
+    /* border-radius: 4px; */
+    font-size: 1rem;
+    margin-left: 50px;
+  }
+.search-logo{
+  border: none;
+}
+.cart {
+    display: flex;
+    align-items: center;
+    /* margin-left: 1rem; */
+  }
+  
+  .cart-button {
+    background-color: #ff6600;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem; 
+    color: white;
+    font-size: 15px;
+  }
+  
+  .cart-button:hover {
+    background-color: #e55d00;
+    color: #f0f0f0;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 1rem;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #ff6600;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+   
+
+  @media (max-width: 768px) {
+    .navbar-search {
+      order: 2;
+      /* margin-top: 0.5rem; */
+      width: 100%;
+    }
+  
+    .navbar-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #79b8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    .navbar-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .search-input {
+      font-size: 0.9rem;
+      padding: 0.6rem 0.5rem;
+      width: 60%;
+      margin: 0;
+      
+    }
+    
+    .navbar {
+      padding: 0rem 1.4rem;
+      width: 100vw;
+      overflow: hidden;
+
+    }
+  
+    .nav-link {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  max-width: 200px;
+  height: 100%;
+  background-color: #f3eeee;
+  color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.close-sidebar-btn {
+  background: none;
+  border: none;
+  color: #100f0f;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+
+.sidebar-link {
+  display: block;
+  margin: 1rem 0;
+  text-decoration: none;
+  color: #080808;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-link:hover {
+  color: #ff6600;
+}
+
+
+.navbar-logo {
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 75%;
+  }
+  .sidebar-link {
+    font-size: 1rem; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    max-width: 150px;
+  }
+  .sidebar-link {
+    font-size: 0.9rem; 
+  }
+
+  .navbar-toggle {
+    display: none; 
+  }
+  .cart {
+    
+    display: none;
+  }
+  #wishlist{
+    display: none;
+  }
+}
+
+
+
+.login-button, .account-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.login-button:hover {
+  background-color: #ff8364;
+}
+
+
+.login-dropdown {
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 200px;
+  z-index: 1000;
+}
+
+.login-dropdown a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.login-dropdown a:hover {
+  background-color: #f5f5f5;
+}
+
+
+@media (max-width: 480px) {
+  .login-dropdown {
+    width: 100%;
+  
+  }
+  .navbar-login{
+    position: absolute;
+    right: 0;
+    margin-left: 20px;
+    
+  }
+}

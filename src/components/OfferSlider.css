@@ -1,0 +1,127 @@
+.offer-slider {
+    position: relative;
+    padding: 20px ;
+    overflow-x: hidden;
+  }
+  
+  .offer-slider h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .offer-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .offer-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .offer-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    scroll-snap-align: start;
+    transition: transform 0.3s;
+  }
+  
+  .offer-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .offer-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .offer-card h3 {
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    text-align: center;
+  }
+  
+  .offer-card p {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+  }
+  
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  .scroll-button.left {
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }
+  
+  .scroll-button:hover {
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .offer-card {
+      width: 160px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .offer-card {
+      width: 140px;
+    }
+  }
+
+@media (max-width: 480px) and (min-width: 280px) {
+    .scroll-button left {
+        display: none;
+    }
+  
+    .offer-slider{
+      width: 100vw;
+    }
+    .offer-card {
+      width: 25%; 
+      padding: 10px; 
+      height: auto; 
+    }
+  
+    .offer-image {
+      height: 80px;
+    }
+  
+    .offer-card h3 {
+      font-size: 0.9rem;
+    }
+  
+    .offer-card p {
+      font-size: 0.75rem;
+    }
+    .offer-slider {
+        padding: 0px 20px ;
+      }
+    
+  }
+  
+    
